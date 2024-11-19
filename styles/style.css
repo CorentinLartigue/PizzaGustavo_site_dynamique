@@ -1,56 +1,227 @@
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: Cambria   ;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #f5d77f; /* Couleur de fond rappelant la région Lorraine */
-    display: grid;
-    grid-template-columns: 3fr 5fr;
-    grid-template-rows: 1fr auto 3fr auto;
-  }
-  
-  /* Définir les styles pour l'en-tête */
-  #entete {
-    background-color: #333;
-    color: #fff;
-    padding: 10px; 
-    grid-row: 1;
-    grid-column: span 2;
-    text-align: center ;
-  }
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4; /* Fond clair */
+  color: #333;
+  min-height: 100vh; /* Minimum 100% de la hauteur de la fenêtre */
+  display: flex;
+  flex-direction: column; /* Structure de la page en colonne */
+}
 
+/* === En-tête === */
+#entete {
+  height: 300px; /* Hauteur de l'en-tête */
+  background-image: url('../images/header.png'); /* Chemin vers l'image */
+  background-size: cover; /* L'image couvre tout l'espace */
+  background-position: center; /* Centre l'image */
+  position: relative;
+}
+
+#entete .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Overlay semi-transparent */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+#entete h1 {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin-bottom: 0.5rem;
+}
+
+#entete p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* === Menu de navigation === */
+nav {
+  background-color: #333;
+  padding: 0.8rem 0;
+}
+
+.menu-nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.menu-nav li {
+  margin: 0 1.5rem;
+}
+
+.menu-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu-nav a:hover {
+  color: #ff0000; /* Rouge vif */
+}
+
+/* === Section principale === */
+main#menu {
+  flex: 1; /* Permet à la section principale de s'étendre pour pousser le footer en bas */
+  background: white;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* === Section Accueil === */
+#accueil {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.accueil-description h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.accueil-description p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.accueil-incitation h2 {
+  font-size: 2rem;
+  color: #ff0000;
+  margin-bottom: 1rem;
+}
+
+.accueil-incitation p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.accueil-incitation .btn-commande {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #ff0000;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.accueil-incitation .btn-commande:hover {
+  background-color: #cc0000;
+}
+
+
+#infos {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+}
+
+#infos h1, #infos h2 {
+  color: #D22323;
+  text-align: center;
+}
+
+#infos ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#infos ul li {
+  background: #F9F9F9;
+  margin: 5px 0;
+  padding: 10px;
+  border-left: 5px solid #D22323;
+}
+
+#infos p {
+  margin: 10px 0;
+}
+
+#infos a {
+  color: #D22323;
+  text-decoration: none;
+}
+
+#infos a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* === Pied de page === */
+footer {
+  flex-shrink: 0; /* Empêche le footer de rétrécir */
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto; /* Place le footer en bas de la page */
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
   #entete h1 {
-    position: absolute;
-    margin: 0;
-    font-size: 50px;
-    text-transform: uppercase;
-    font-family: Montserrat;
-    letter-spacing: 2px;
-    line-height: 140px;
-    margin-left: 400px;
+      font-size: 2rem;
   }
 
-  #img1 {
-    position: relative;
-    float:left;
-    margin-left: 20px;
-    max-width: 100%;
-    border-radius: 10px 10px 10px 10px;
+  #entete p {
+      font-size: 1rem;
   }
 
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    grid-row: 4;
-    grid-column: span 2;
-    margin-top: 100px;
+  .menu-nav {
+      flex-direction: column;
+      align-items: center;
   }
 
-  footer p {
-    margin: 0;
-    color: white;
-    font-family: Montserrat;
-    font-size: 17px;
+  .menu-nav li {
+      margin: 0.5rem 0;
   }
+
+  main#menu {
+      padding: 1rem;
+  }
+
+  #carte {
+    flex-direction: column; /* Passe à une disposition verticale sur petits écrans */
+  }
+
+  .categorie {
+    width: 100%;
+  }
+}

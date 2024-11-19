@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /projet_perso/TP-Pizza/
+
+# Réécrire les URL comme /tarif vers index.php?controller=tarif
+RewriteRule ^([^/]+)$ index.php?controller=$1 [L,QSA]

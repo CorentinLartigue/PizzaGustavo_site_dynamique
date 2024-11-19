@@ -1,7 +1,15 @@
 <?php
+$controller = isset($_GET['controller']) ? $_GET['controller'] : 'accueil'; 
 
-require_once 'controleurs/controleurCarte.php';
-require_once 'modeles/accesdb.php';
-
-
+switch ($controller) {
+    case 'tarif':
+        require_once 'controleurs/controleurTarif.php'; 
+        break;
+    case 'info':
+        require_once 'controleurs/controleurInfos.php'; 
+        break;
+    default:
+        require_once 'controleurs/controleurAccueil.php'; 
+        break;
+}
 ?>
