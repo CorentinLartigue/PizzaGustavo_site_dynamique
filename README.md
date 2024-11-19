@@ -42,7 +42,7 @@ Bienvenue dans le projet **Pizza Gustavo**, une application web dynamique et int
    - Serveur de base de données MySQL/MariaDB.
 
 2. **Étapes d’installation** :
-   - Clonez ou téléchargez ce dépôt dans votre répertoire web:     git clone https://github.com/CorentinLartigue/PizzaGustavo_site_dynamique.git
+   - Clonez ou téléchargez ce dépôt dans votre répertoire web:     (`git clone https://github.com/CorentinLartigue/PizzaGustavo_site_dynamique.git`)
    - Importez la base de données fournie (`pizza.sql`) via votre outil de gestion MySQL préféré (phpMyAdmin, MySQL Workbench, etc.).
    - Configurez les paramètres de connexion à la base de données dans le fichier `config/param.php`.
 
